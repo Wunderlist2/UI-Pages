@@ -126,6 +126,10 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+html {
+  font-size: 100%;
+  min-width: 395px;
+}
 @font-face {
   font-family: avenier;
   src: url("/dist/AvenirRoman.otf") format("otf");
@@ -133,9 +137,14 @@ table {
 a {
   text-decoration: none;
   color: white;
+  text-shadow: 2px 2px black;
 }
 a:hover {
   color: black;
+  text-shadow: none;
+}
+a:active {
+  color: gray;
 }
 .container {
   width: 100%;
@@ -153,10 +162,9 @@ svg {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  font-size: 30px;
+  font-size: 2.4rem;
   text-align: center;
   background-color: none;
-  text-shadow: 2px 2px black;
   margin: 4vh 0;
 }
 .content {
@@ -178,17 +186,111 @@ svg {
   justify-content: center;
 }
 .content section h1 {
-  font-size: 64px;
+  font-size: 5rem;
 }
 .content section h3 {
   margin: 5vh 0 0 0;
-  font-size: 32px;
+  font-size: 2.4rem;
 }
 .content section h3 span {
   border: 2px solid white;
   padding: 2vh 2%;
 }
+.content section h3 a:hover span {
+  background-color: white;
+}
 .marketing {
   width: 100%;
+  height: 100vh;
   display: flex;
+  background: #493c34;
+}
+.marketing .gridphotos {
+  width: 50%;
+  max-height: 100vh;
+  overflow: hidden;
+  text-align: center;
+}
+.marketing .gridphotos img {
+  height: 100vh;
+}
+.marketing section {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100vh;
+  color: white;
+  font-size: 2rem;
+}
+.marketing section h2 {
+  font-size: 3.2rem;
+  text-align: center;
+  align-self: center;
+  padding: 10vh 5%;
+}
+.marketing section p {
+  width: 70%;
+  margin: 0 auto;
+}
+footer {
+  display: flex;
+  background-color: black;
+  width: 100%;
+  height: 7vh;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+@media only screen and (max-width: 1423px) {
+  html {
+    font-size: 80%;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .content section {
+    padding: 0;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+  }
+  html {
+    font-size: 74%;
+  }
+}
+@media only screen and (max-width: 791px) {
+  .container {
+    overflow: hidden;
+  }
+  .landing header nav {
+    flex-direction: column;
+  }
+  .landing header nav a:nth-child(2) {
+    margin: 2vh 0;
+  }
+  .marketing {
+    flex-direction: column;
+    height: 200vh;
+  }
+  .marketing .gridphotos {
+    width: 100%;
+    flex-wrap: wrap;
+    overflow: hidden;
+    order: 2;
+  }
+  .marketing .gridphotos img {
+    width: auto;
+    height: 100vh;
+  }
+  .marketing .gridphotos img:nth-child(2) {
+    display: none;
+  }
+  .marketing section {
+    width: 100%;
+    order: 1;
+  }
+  .content {
+    background-position-x: 15%;
+    background-size: cover;
+  }
 }
