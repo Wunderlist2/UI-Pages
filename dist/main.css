@@ -128,7 +128,7 @@ table {
 }
 html {
   font-size: 100%;
-  min-width: 395px;
+  min-width: 350px;
 }
 @font-face {
   font-family: avenier;
@@ -201,24 +201,22 @@ svg {
 }
 .marketing {
   width: 100%;
-  height: 100vh;
   display: flex;
   background: #493c34;
 }
 .marketing .gridphotos {
   width: 50%;
-  max-height: 100vh;
   overflow: hidden;
   text-align: center;
+  align-self: center;
 }
 .marketing .gridphotos img {
-  height: 100vh;
+  width: 60%;
 }
 .marketing section {
   display: flex;
   flex-direction: column;
   width: 50%;
-  height: 100vh;
   color: white;
   font-size: 2rem;
 }
@@ -231,6 +229,7 @@ svg {
 .marketing section p {
   width: 70%;
   margin: 0 auto;
+  margin-bottom: 5vh;
 }
 footer {
   display: flex;
@@ -270,7 +269,6 @@ footer {
   }
   .marketing {
     flex-direction: column;
-    height: 200vh;
   }
   .marketing .gridphotos {
     width: 100%;
@@ -291,6 +289,5 @@ footer {
   }
   .content {
     background-position-x: 15%;
-    background-size: cover;
   }
 }
