@@ -136,15 +136,6 @@ html {
 }
 a {
   text-decoration: none;
-  color: white;
-  text-shadow: 2px 2px black;
-}
-a:hover {
-  color: black;
-  text-shadow: none;
-}
-a:active {
-  color: gray;
 }
 .container {
   width: 100%;
@@ -166,6 +157,39 @@ svg {
   text-align: center;
   background-color: none;
   margin: 4vh 0;
+}
+.landing header nav a {
+  color: white;
+  text-shadow: 2px 2px black;
+}
+.landing header nav a:hover {
+  color: black;
+  text-shadow: none;
+}
+.landing header nav a:active {
+  color: gray;
+}
+.about header {
+  height: 100%;
+  background-color: black;
+}
+.about header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  align-items: center;
+  font-size: 2.4rem;
+  text-align: center;
+  padding: 4vh 0;
+  margin: 0 auto;
+}
+.about header nav a {
+  color: white;
+}
+.about header nav a:hover {
+  color: black;
+  background-color: white;
 }
 .content {
   height: 100vh;
@@ -195,6 +219,12 @@ svg {
 .content section h3 span {
   border: 2px solid white;
   padding: 2vh 2%;
+}
+.content section h3 a {
+  color: white;
+}
+.content section h3 a:hover {
+  color: black;
 }
 .content section h3 a:hover span {
   background-color: white;
@@ -231,6 +261,82 @@ svg {
   margin: 0 auto;
   margin-bottom: 5vh;
 }
+.about .photos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 5vh 0;
+  background: #493c34;
+  color: white;
+}
+.about .photos h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 3rem;
+}
+.about .photos div {
+  width: 20%;
+  margin: 0 5%;
+  align-self: center;
+  text-align: center;
+  font-size: 1.6rem;
+}
+.grid {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+  margin: 2vh 0;
+}
+.contact {
+  font-size: 2.4rem;
+  text-align: center;
+  margin-top: 5vh;
+}
+form {
+  background: #493c34;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.6rem;
+  height: 81vh;
+  min-height: 500px;
+  color: white;
+}
+form div {
+  margin: 0 auto;
+}
+form div div {
+  text-align: end;
+}
+form div :last-child {
+  text-align: left;
+}
+form > input {
+  margin: 0 auto;
+}
+input[type="text"] {
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid white;
+  resize: none;
+  font-size: 1.8rem;
+  color: white;
+  background: #493c34;
+}
+input[type=text]:focus {
+  border-bottom: 2px solid blue;
+}
+textarea[name="description"] {
+  width: 100%;
+  height: 300px;
+  border: 2px solid white;
+  font-size: 1.8rem;
+  resize: none;
+}
+textarea[name="description"]:focus {
+  border: 2px solid blue;
+}
 footer {
   display: flex;
   background-color: black;
@@ -261,10 +367,12 @@ footer {
   .container {
     overflow: hidden;
   }
-  .landing header nav {
+  .landing header nav,
+  .about header nav {
     flex-direction: column;
   }
-  .landing header nav a:nth-child(2) {
+  .landing header nav a:nth-child(2),
+  .about header nav a:nth-child(2) {
     margin: 2vh 0;
   }
   .marketing {
@@ -289,5 +397,12 @@ footer {
   }
   .content {
     background-position-x: 15%;
+  }
+  .about .photos div {
+    width: 100%;
+    margin: 0 5%;
+    align-self: center;
+    text-align: center;
+    font-size: 1.6rem;
   }
 }
