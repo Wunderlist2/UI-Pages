@@ -1,3 +1,26 @@
 @font-fix:  ~"only screen and (max-width: 1423px)";
 @tablet: ~"only screen and (max-width: 1000px)";
 @mobile: ~"only screen and (max-width: 791px)";
+
+@main-font-color: white;
+@contrast-font-color: black;
+@backgroundcolor: rgb(73, 60, 52);
+@tabletfontsize: 74%;
+@mobilefontsize: 68%;
+
+.flex{
+    display: flex;
+    justify-content: center;
+}
+
+.flex_mobile{
+    display: flex;
+    flex-direction: column;
+}
+
+.input_fields(@marginupdown, @marginleftright, @paddingupdown, @paddingleftright){
+    margin: @marginupdown @marginleftright;
+    padding: @paddingupdown @paddingleftright;
+    box-sizing: border-box;
+    border: none;
+}
